@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    touch-action: manipulation;
+}
+
+body {
+    background: #1a1a2e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Courier New', monospace;
+    overflow: hidden;
+}
+
+#game-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#game-canvas {
+    border: 2px solid #4a4a6a;
+    background: #0d0d1a;
+}
+
+#ui {
+    display: flex;
+    justify-content: space-around;
+    width: 300px;
+    color: #fff;
+    font-size: 18px;
+}
+
+#score, #level, #lines {
+    text-align: center;
+}
+
+#score span, #level span, #lines span {
+    display: block;
+    font-size: 24px;
+    color: #00f0f0;
+}
+
+#controls {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+#controls button {
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(145deg, #2a2a4a, #1a1a3a);
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+#controls button:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+#btn-rotate {
+    background: linear-gradient(145deg, #4a2a8a, #3a1a7a);
+}
+
+#btn-drop {
+    background: linear-gradient(145deg, #8a2a2a, #7a1a1a);
+}
+
+#game-over {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    color: #fff;
+    border: 2px solid #ff2a2a;
+}
+
+#game-over h1 {
+    color: #ff2a2a;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#game-over p {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#game-over button {
+    padding: 15px 30px;
+    font-size: 18px;
+    background: #00f0f0;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #000;
+    font-weight: bold;
+}
+
+#game-over button:hover {
+    background: #fff;
+}
+
+/* Landscape orientation hint */
+@media (orientation: landscape) {
+    #game-container {
+        flex-direction: row;
+    }
+    
+    #controls {
+        flex-direction: column;
+    }
+}

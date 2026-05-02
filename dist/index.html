@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Tetris</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="game-canvas"></canvas>
+        <div id="ui">
+            <div id="score">0</div>
+            <div id="level">1</div>
+            <div id="lines">0</div>
+        </div>
+        <div id="next-piece">
+            <canvas id="next-canvas"></canvas>
+        </div>
+        <div id="controls">
+            <button id="btn-left">←</button>
+            <button id="btn-rotate">↻</button>
+            <button id="btn-right">→</button>
+            <button id="btn-drop">↓</button>
+        </div>
+        <div id="game-over">
+            <h1>GAME OVER</h1>
+            <p>Score: <span id="final-score">0</span></p>
+            <button onclick="game.reset()">Play Again</button>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
